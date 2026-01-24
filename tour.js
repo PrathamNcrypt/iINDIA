@@ -1,4 +1,5 @@
 
+
 let buttons = document.querySelectorAll(".my-3 button");
 let mainImage = document.querySelector("#monument-img");
 let explore = document.querySelector(".explore");
@@ -47,6 +48,3 @@ const showExplore = () =>{
 }
  
 explore.addEventListener("click", showExplore);
-
-
-
