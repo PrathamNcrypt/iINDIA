@@ -6,19 +6,14 @@
 
 
 .explore {
-  /* Set the image */
-  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/017/791/706/original/4k-time-lapse-of-taj-mahal-an-ivory-white-marble-mausoleum-on-the-south-bank-of-the-yamuna-river-in-agra-uttar-pradesh-india-free-video.jpg');
-  background-size: cover;  /* Ensures image covers the whole area */
+  background-image: url(./images/tajmahal.jpg) ;
+  background-size: cover;  
   background-position: center;
-  
-  /* Define height */
   height: 100vh; 
   width: 100%;
-  
-  /* Flexbox to center the content */
   display: flex;
-  justify-content: center; /* Horizontal Center */
-  align-items: center;     /* Vertical Center */
+  justify-content: center; 
+  align-items: center;     
 }
 
 .container-fluid{
@@ -55,3 +50,6 @@ background-color:  #FFDB58;
 margin-top: 0;
 }
 
+.hide{
+  display: none;
+}

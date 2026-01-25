@@ -1,67 +1,75 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title>Indian Heritage</title>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <script type="module"
-  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-</script>
-<style>
-  .card {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iINDIA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  }
-
-  button {
-    transition: all 0.3s ease;
-  }
-
-  button:hover {
-    transform: translateY(-3px);
-  }
-
-  img {
-    transition: opacity 0.5s ease;
-  }
-</style>
+  <style>
+    .card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: none;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.2); 
+    }
+    button {
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    button:hover {
+      transform: translateY(-3px);
+    }
+   
+    model-viewer::part(default-progress-bar) {
+      background-color: #ffc107;
+      height: 5px;
+    }
+  </style>
 </head>
-
 
 <body class="bg-dark text-light">
 
 <div class="container text-center my-5">
 
-  <h1 class="mb-4">Indian Heritage Explorer</h1>
+  <h1 class="mb-4 display-5 fw-bold text-warning">Indian Heritage Explorer</h1>
 
-  <div class="mb-4">
-    <button class="btn btn-outline-warning m-2" onclick="showTaj()">Taj Mahal</button>
-    <button class="btn btn-outline-warning m-2" onclick="showRedFort()">Red Fort</button>
-    <button class="btn btn-outline-warning m-2" onclick="showHampi()">Hampi Ruins</button>
+  <div class="mb-5">
+    <button class="btn btn-outline-warning m-2 px-4" onclick="showTaj()">Taj Mahal</button>
+    <button class="btn btn-outline-warning m-2 px-4" onclick="showRedfort()">Red Fort</button>
+    <button class="btn btn-outline-warning m-2 px-4" onclick="showEllora()">Ellora Caves</button>
+    <button class="btn btn-outline-warning m-2 px-4" onclick="showQutub()">Qutub Minar</button>
+    <button class="btn btn-outline-warning m-2 px-4" onclick="showTomb()">Humanyun Tomb</button>
   </div>
 
-  <div class="card bg-secondary text-light mx-auto p-3" style="max-width:500px;">
+  <div class="card bg-secondary text-light mx-auto overflow-hidden" style="max-width: 600px; border-radius: 15px;">
+    
     <model-viewer
-  id="viewer"
-  src="taj.glb"
-  camera-controls
-  auto-rotate
-  ar
-  ar-modes="scene-viewer webxr quick-look"
-  shadow-intensity="1"
-  style="width:100%; height:400px; background:#111;">
-</model-viewer>
-    <div class="card-body">
-      <h3 id="title" class="card-title">Select a Monument</h3>
-      <p id="desc" class="card-text">Click buttons above to explore India's heritage.</p>
+      id="viewer"
+      src="taj.glb" 
+      alt="3D Model of Heritage Site"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1.5"
+      shadow-softness="1"
+      exposure="1"
+      environment-image="neutral"
+      style="width:100%; height:450px; background: linear-gradient(180deg, #2c3e50 0%, #000000 100%);">
+    </model-viewer>
+
+    <div class="card-body bg-dark border-top border-secondary">
+      <h3 id="title" class="card-title text-warning">Taj Mahal</h3>
+      <p id="desc" class="card-text text-light opacity-75">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra.</p>
     </div>
   </div>
 
 </div>
 
 <script src="new.js"></script>
+<script src="tour.js"></script>
 </body>
 </html>
