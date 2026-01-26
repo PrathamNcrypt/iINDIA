@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar {
+  background-color: maroon;
+}
 
 .explore {
   background-image: url(./images/tajmahal.jpg) ;
@@ -52,4 +54,5 @@ margin-top: 0;
 
 .hide{
   display: none;
+
 }
