@@ -4,6 +4,38 @@
   box-sizing: border-box;
 }
 
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Cinzel', serif; 
+}
+
+.heritage-btn {
+   
+    background-color: #800000 !important; 
+    color: #FFD700 !important;             
+    border: 2px solid #5a0000 !important;
+    
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.heritage-btn:hover {
+    background-color: #a52a2a !important; 
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
 
 .explore {
   background-image: url(./images/tajmahal.jpg) ;
@@ -53,3 +85,4 @@ margin-top: 0;
 .hide{
   display: none;
 }
+

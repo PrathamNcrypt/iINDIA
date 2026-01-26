@@ -5,8 +5,10 @@ let description = document.querySelector("#monument-desc");
 let title = document.querySelector("#monument-title");
 let model = document.querySelector(".box");
 
+
 async function fetchDescription(monumentName) {
-  description.innerText = "Loading AI generated details...";
+  description.innerText = "✨Loading AI generated details...";
+  description.style.fontWeight = "bold";
 
   const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${monumentName}`;
   let response = await fetch(url);
