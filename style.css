@@ -36,6 +36,9 @@ h1, h2, h3, .navbar-brand {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
+.navbar {
+  background-color: maroon;
+}
 
 .explore {
   background-image: url(./images/tajmahal.jpg) ;
@@ -85,4 +88,6 @@ margin-top: 0;
 .hide{
   display: none;
 }
+
+
 
