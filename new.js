@@ -53,3 +53,27 @@ function showTomb() {
     "THumayun's tomb (Persian: Maqbara-i Humayun) is the tomb of Mughal Emperor Humayun situated in Delhi, India. The tomb was commissioned by Humayun's first wife and chief consort, Empress Bega Begum under her patronage in 1558, and designed by Mirak Mirza Ghiyas and his son, Sayyid Muhammad, Persian architects chosen by her."
   );
 }
+
+function showGate() {
+  updateViewer(
+    "./models/india-gate.gltf", 
+    "India Gate", 
+    "The India Gate is a war memorial located near the Rajpath on the eastern edge of the ceremonial axis of New Delhi."
+  );
+}
+
+function showGateway() {
+  updateViewer(
+    "./models/gateway.gltf", 
+    "Gateway of India", 
+    "The Gateway of India is an arch-monument, completed in 1924, on the waterfront of Mumbai, Maharashtra, India. It was erected to commemorate the landing of King George V of the United Kingdom for his coronation as the Emperor of India in December 1911 at Strand Road near Wellington Fountain. He was the first British monarch to visit India."
+  );
+}
+
+function showMandir() {
+  updateViewer(
+    "./models/ram_temple.glb", 
+    "Ram Mandir", 
+    "The Ram Mandir, is a Hindu temple complex in Ayodhya, Uttar Pradesh, India. Many Hindus believe that it is located at the site of Ram Janmabhoomi, the mythical birthplace of Rama, a principal deity of Hinduism."
+  );
+}
