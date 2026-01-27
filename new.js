@@ -56,7 +56,7 @@ function showTomb() {
 
 function showGate() {
   updateViewer(
-    "./models/india-gate.gltf", 
+    "./models/gate.glb", 
     "India Gate", 
     "The India Gate is a war memorial located near the Rajpath on the eastern edge of the ceremonial axis of New Delhi."
   );
