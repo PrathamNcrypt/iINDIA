@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iINDIA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+      min-height: 100vh;
+      color: white;
+    }
+
+    
+    .text-card {
+      background: #fff;
+      border-left: 5px solid #800000; 
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      color: #333; 
+    }
+
+    .text-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.2); 
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      color: #DAA520; 
+      margin-bottom: 10px;
+    }
+
+    .card-title-custom {
+      color: #800000;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+
+    .card-text-custom {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    .time {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; 
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container mt-5 text-center">
+  
+  <h2 class="mb-4 fw-bold text-warning">City Itinerary Planner</h2>
+
+  <select id="citySelect" class="form-select mb-3" style="max-width: 300px; margin: 0 auto;">
+    <option value="Delhi">Delhi</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Pune">Pune</option>
+  </select>
+
+  <div class="time mb-4">
+    <input 
+      type="number" 
+      id="hoursInput" 
+      class="form-control" 
+      style="max-width: 300px;" 
+      placeholder="Hours available (0-12)" 
+      min="0" 
+      max="12"
+      oninput="if(this.value > 12) this.value = 12; if(this.value < 0) this.value = 0;"
+    >
+    <button onclick="dayPlan()" type="button" class="btn btn-warning fw-bold">Check Plan</button>
+  </div>
+
+  <div class="card text-card p-4 mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+      <div class="card-icon">📜</div>
+      <h5 id="cardTitle" class="card-title-custom mb-3">Your Itinerary</h5>
+      <p class="card-text-custom" id="cardText">
+        Enter your time above and click "Check Plan"
+      </p>
+      <a href="#" id ="map" class="btn btn-sm btn-outline-dark mt-2">Navigate</a>
+    </div>
+  </div>
+</div>
+
+<script src="new.js"></script>
+</body>
+</html>

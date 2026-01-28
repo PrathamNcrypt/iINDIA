@@ -62,3 +62,8 @@ const showExplore = () => {
 };
 
 explore.addEventListener("click", showExplore);
+
+
+
+
+
